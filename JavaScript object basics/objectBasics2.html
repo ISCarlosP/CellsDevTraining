@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+<section class="preview">
+
+
+
+</section>
+
+</body>
+<script>
+    let bandInfo;
+
+    // Add your code here
+
+    const favoriteBand = {
+        name: 'Linkin Park',
+        nationality: 'United States',
+        genre: 'rock',
+        members: 6,
+        formed: 1996,
+        split: false,
+        albums: [
+            {
+                name: 'Hybrid Theory',
+                released: 2000
+            },
+            {
+                name: 'Meteora',
+                released: 2003
+            },
+            {
+                name: 'Minutes to Midnight',
+                released: 2007
+            },
+        ]
+    }
+
+    bandInfo = "Linkin Park is an American rock band formed in 1996. They are known for their unique style that blends rock, hip-hop, and electronic elements. Their debut album 'Hybrid Theory' was released on October 24, 2000.";
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+</script>
+
+</html>
