@@ -39,16 +39,33 @@
 
     function displayCatInfo(catString) {
         debugger
+        const myCatString = JSON.parse(catString);
+        const catsNameArray = myCatString.map(cat => (cat.name));
+
         let total = 0;
         let male = 0;
+        let female = 0;
 
-        // Add your code here
+// Add your code here
+//Total de Gatos machos y hembras
+        myCatString.map(cats => {
+            cats['kittens'].map(cat => {
+                if (cat.gender === 'm') {
+                    male++
+                    return
+                }
+                female++
+            })
+        })
 
-        // Don't edit the code below here!
+        motherInfo = catsNameArray.join(',') + '.';
+        kittenInfo = `Total: ${male + female}, male: ${male}, female: ${female}`
+// Don't edit the code below here!
 
         para1.textContent = motherInfo;
         para2.textContent = kittenInfo;
     }
+
 
     section.appendChild(para1);
     section.appendChild(para2);
