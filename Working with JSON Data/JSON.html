@@ -34,13 +34,11 @@
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
 
     fetch(requestURL)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(text => displayCatInfo(text))
 
     function displayCatInfo(catString) {
-        debugger
-        const myCatString = JSON.parse(catString);
-        const catsNameArray = myCatString.map(cat => (cat.name));
+        const catsNameArray = catString.map(cat => (cat.name));
 
         let total = 0;
         let male = 0;
@@ -48,7 +46,7 @@
 
 // Add your code here
 //Total de Gatos machos y hembras
-        myCatString.map(cats => {
+        catString.map(cats => {
             cats['kittens'].map(cat => {
                 if (cat.gender === 'm') {
                     male++
