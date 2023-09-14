@@ -58,7 +58,9 @@
             })
         })
 
-        motherInfo = catsNameArray.join(',') + '.';
+        let lastElement = catsNameArray.pop();
+        
+        motherInfo += catsNameArray.join(' , ') + ' y ' + lastElement;
         kittenInfo = `Total: ${male + female}, male: ${male}, female: ${female}`
 // Don't edit the code below here!
 
